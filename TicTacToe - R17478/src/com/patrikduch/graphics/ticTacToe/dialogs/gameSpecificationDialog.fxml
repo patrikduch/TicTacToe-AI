@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.shape.Box?>
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.patrikduch.graphics.ticTacToe.dialogs.GameSpecificationController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <content>
+
+        <fx:define>
+            <ToggleGroup fx:id="whoStartsToggleGroup"/>
+        </fx:define>
+
+        <fx:define>
+            <ToggleGroup fx:id="whatSymbolToggleGroup"/>
+        </fx:define>
+
+
+        <BorderPane>
+
+            <top>
+                <Label text="Nastavení hry" BorderPane.alignment="CENTER" style="-fx-font-size: 20px;">
+                    <padding>
+                        <Insets bottom="22"></Insets>
+                    </padding>
+                </Label>
+            </top>
+
+
+            <center>
+                <VBox>
+                    <Label text="Váše označení" style="-fx-font-size: 15px; -fx-underline: true;">
+                        <padding>
+                            <Insets top="10" left="40"></Insets>
+                        </padding>
+                    </Label>
+
+                    <HBox>
+
+                        <RadioButton toggleGroup="$whatSymbolToggleGroup" text="X">
+                            <padding>
+                                <Insets left="38" top="10"></Insets>
+                            </padding>
+                        </RadioButton>
+
+                        <RadioButton text="O" toggleGroup="$whatSymbolToggleGroup"
+                                     selected="true">
+                            <padding>
+                                <Insets left="15" top="10"></Insets>
+                            </padding>
+                        </RadioButton>
+                    </HBox>
+                </VBox>
+            </center>
+
+
+            <left>
+
+                <VBox>
+                    <Label text="Přezdívka" style="-fx-font-size: 15px; -fx-underline: true;">
+                        <padding>
+                            <Insets top="10" bottom="5"></Insets>
+                        </padding>
+                    </Label>
+
+                    <TextField fx:id="nickInputTextField">
+
+
+                    </TextField>
+
+                    <Label text="První tah" style="-fx-font-size: 15px; -fx-underline: true;">
+                        <padding>
+                            <Insets top="20" bottom="5"></Insets>
+                        </padding>
+                    </Label>
+
+                    <RadioButton toggleGroup="$whoStartsToggleGroup" selected="true"
+                                 text="Umělá inteligence (UI)">
+
+                        <padding>
+                            <Insets top="5" bottom="5"></Insets>
+                        </padding>
+
+                    </RadioButton>
+                    <RadioButton toggleGroup="$whoStartsToggleGroup" text="Hráč"></RadioButton>
+
+                </VBox>
+
+
+
+
+
+
+
+
+            </left>
+
+
+            <right>
+
+
+            </right>
+
+
+            <bottom>
+
+            </bottom>
+
+        </BorderPane>
+
+    </content>
+
+</DialogPane>

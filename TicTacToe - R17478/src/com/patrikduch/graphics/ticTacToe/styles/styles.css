@@ -1,0 +1,36 @@
+
+.menu .label
+{
+    -fx-text-fill: white;
+}
+
+.menu-item .label{
+    -fx-text-fill: black;
+}
+
+
+.menu-item:focused .label{
+    -fx-text-fill: white;
+}
+
+
+
+.menu { /* The File menu item */
+
+    -fx-background-color: #16931f;
+    -fx-font-size: 18px;
+    -fx-focus-color:white;
+}
+
+
+.menu:showing { /* The menu bar itself */
+
+    -fx-background-color: #238046;
+}
+
+
+.menu-item:focused {
+    -fx-background-color: #238046;
+    -fx-focus-color:black;
+}
+

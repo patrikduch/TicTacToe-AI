@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml" fx:controller="com.patrikduch.graphics.ticTacToe.controllers.GameController"
+            style="-fx-border-width: 10px; -fx-border-color: #292929;
+             -fx-border-style: solid;" stylesheets="@../styles/styles.css">
+
+
+    <top>
+
+        <MenuBar fx:id="mainMenu" style="-fx-background-color: #16931f;">
+            <Menu text="Hra" style="-fx-background-color: #238046;">
+                <items>
+                    <MenuItem text="Resetovat" onAction="#resetGame"></MenuItem>
+                    <MenuItem text="Uložit" onAction="#saveGame"></MenuItem>
+                    <MenuItem text="Nahrát" onAction="#loadGame"></MenuItem>
+                    <SeparatorMenuItem></SeparatorMenuItem>
+                    <MenuItem text="Hlavní nabídka"></MenuItem>
+                </items>
+            </Menu>
+        </MenuBar>
+
+    </top>
+
+    <center>
+
+        <GridPane fx:id="mainGridPane" style="-fx-background-color: #19140f;" >
+
+            <padding>
+                <Insets top="10"></Insets>
+            </padding>
+
+            <columnConstraints>
+                <ColumnConstraints percentWidth="33.33"></ColumnConstraints>
+                <ColumnConstraints percentWidth="33.33"></ColumnConstraints>
+                <ColumnConstraints percentWidth="33.33"></ColumnConstraints>
+            </columnConstraints>
+
+            <rowConstraints>
+                <RowConstraints percentHeight="40.33"></RowConstraints>
+                <RowConstraints percentHeight="40.33"></RowConstraints>
+                <RowConstraints percentHeight="40.33"></RowConstraints>
+            </rowConstraints>
+
+
+
+            <!-- First row -->
+
+            <Label fx:id="firstElementFirstRow" onMouseClicked="#chooseCell" prefWidth="Infinity" prefHeight="Infinity" GridPane.columnIndex="0"
+                   GridPane.rowIndex="0" style=" -fx-background-color:#292929; -fx-border-width: 20px; -fx-border-color: #b0070b;
+             -fx-border-style: solid;" text=" ">
+            </Label>
+
+            <Label fx:id="secondElementFirstRow" onMouseClicked="#chooseCell" prefWidth="Infinity" prefHeight="Infinity" GridPane.columnIndex="1"
+                   GridPane.rowIndex="0" style=" -fx-background-color:#292929; -fx-border-width: 20px; -fx-border-color: #b0070b;
+             -fx-border-style: solid;" text="  ">
+            </Label>
+
+            <Label fx:id="thirdElementFirstRow" onMouseClicked="#chooseCell" prefWidth="Infinity" prefHeight="Infinity" GridPane.columnIndex="2"
+                   GridPane.rowIndex="0" style=" -fx-background-color:#292929; -fx-border-width: 20px; -fx-border-color: #b0070b;
+             -fx-border-style: solid;" text="  ">
+            </Label>
+
+
+            <!-- Second row -->
+
+            <Label fx:id="firstElementSecondRow" onMouseClicked="#chooseCell" prefWidth="Infinity" prefHeight="Infinity" GridPane.columnIndex="0"
+                   GridPane.rowIndex="1" style=" -fx-background-color:#292929; -fx-border-width: 20px; -fx-border-color: #b0070b;
+             -fx-border-style: solid;" text=" ">
+            </Label>
+
+            <Label fx:id="secondElementSecondRow" onMouseClicked="#chooseCell" prefWidth="Infinity" prefHeight="Infinity" GridPane.columnIndex="1"
+                   GridPane.rowIndex="1" style=" -fx-background-color:#292929; -fx-border-width: 20px; -fx-border-color: #b0070b;
+             -fx-border-style: solid;" text="  ">
+            </Label>
+
+            <Label fx:id="thirdElementSecondRow" onMouseClicked="#chooseCell" prefWidth="Infinity" prefHeight="Infinity" GridPane.columnIndex="2"
+                   GridPane.rowIndex="1" style=" -fx-background-color:#292929; -fx-border-width: 20px; -fx-border-color: #b0070b;
+             -fx-border-style: solid;" text="  ">
+            </Label>
+
+            <!-- Third row -->
+
+            <Label fx:id="firstElementThirdRow" onMouseClicked="#chooseCell" prefWidth="Infinity" prefHeight="Infinity" GridPane.columnIndex="0"
+                   GridPane.rowIndex="2" style=" -fx-background-color:#292929; -fx-border-width: 20px; -fx-border-color: #b0070b;
+             -fx-border-style: solid;" text=" ">
+            </Label>
+
+            <Label fx:id="secondElementThirdRow" onMouseClicked="#chooseCell" prefWidth="Infinity" prefHeight="Infinity" GridPane.columnIndex="1"
+                   GridPane.rowIndex="2" style=" -fx-background-color:#292929; -fx-border-width: 20px; -fx-border-color: #b0070b;
+             -fx-border-style: solid;" text="  ">
+            </Label>
+
+            <Label fx:id="thirdElementThirdRow" onMouseClicked="#chooseCell" prefWidth="Infinity" prefHeight="Infinity" GridPane.columnIndex="2"
+                   GridPane.rowIndex="2" style=" -fx-background-color:#292929; -fx-border-width: 20px; -fx-border-color: #b0070b;
+             -fx-border-style: solid;" text="  ">
+
+            </Label>
+
+
+
+        </GridPane>
+
+
+
+    </center>
+
+
+
+
+
+
+
+
+</BorderPane>

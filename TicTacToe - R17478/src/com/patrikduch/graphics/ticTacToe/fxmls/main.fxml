@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+<BorderPane fx:id="mainLayout" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.patrikduch.graphics.ticTacToe.controllers.MainController"
+            stylesheets="@../styles/styles.css">
+
+    <top>
+
+        <MenuBar fx:id="mainMenu" style="-fx-background-color: #16931f;">
+            <Menu text="Nová hra" style="-fx-background-color: #238046;">
+                <items>
+                    <MenuItem text="Snadná" onAction="#startGame"></MenuItem>
+                    <MenuItem text="Normální"></MenuItem>
+                    <MenuItem text="Těžká"></MenuItem>
+                </items>
+            </Menu>
+
+
+            <Menu text="FAQ" style="-fx-background-color: #238046;">
+                <items>
+                    <MenuItem text="O hře"></MenuItem>
+                    <MenuItem text="Popis úrovní"></MenuItem>
+                </items>
+            </Menu>
+
+
+            <Menu text="Autor" style="-fx-background-color: #238046;">
+                <items>
+                    <MenuItem text="Studijní informace"></MenuItem>
+                    <MenuItem text="Kontakt"></MenuItem>
+                </items>
+            </Menu>
+
+
+        </MenuBar>
+
+
+    </top>
+
+
+
+    <center>
+        <ImageView fitWidth="400" fitHeight="400">
+            <image>
+                <Image url="/com/patrikduch/graphics/ticTacToe/images/logo.png" />
+            </image>
+        </ImageView>
+    </center>
+
+
+    <bottom>
+
+        <Label text="Autor: Patrik Duch (R17478)" style="-fx-font-size: 20px;"
+               BorderPane.alignment="CENTER">
+
+            <padding>
+                <Insets bottom="10"></Insets>
+            </padding>
+
+        </Label>
+
+    </bottom>
+
+</BorderPane>
